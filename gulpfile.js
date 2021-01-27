@@ -31,12 +31,8 @@ function buildPages() {
 
 
 function buildStyles() {
-  return src('src/styles/*.scss')
-    .pipe(scss())
-    // Не работает код   .pipe(postcss([
-    //  autoprefixer(),
-     // cssnano()
-   // ]))
+  return src('src/styles/style.scss')
+   .pipe(scss())
    .pipe(postcss([cssnano()]))
    .pipe(autoprefixer({
     cascade: false
