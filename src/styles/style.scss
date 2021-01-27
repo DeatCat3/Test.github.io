@@ -1,0 +1,32 @@
+﻿// Удобная вложенность файла для иконок
+@import 'icons.scss';
+*{padding: 0; margin: 0;}
+// Использовал для примера 2 переменные
+$primary-color: red;
+$radius: 12px*2 solid black;
+@media screen and (min-width: 540px){
+    body{display: flex; justify-content: space-between;}
+    button{margin-left:50px; margin-top: 30px; border-radius: $radius; color: blue;}
+    //Вложенность
+    .left{width: 25%; height: 100vh;
+    button:hover{cursor: pointer; color: $primary-color;}
+    img{width: 100%; margin-top: 150px;}
+}
+//конец вложенности
+    .center{ width: 50%; height: 100vh;}
+    h1{font-size: 44px; text-align: center; margin-bottom: 30px;}
+    .center__persone{margin-left: 20px;}
+    .center p{margin-bottom: 20px; font-size: 24px;}
+    .right{ width: 25%; height: 100vh;}
+    .right__films a{margin-left: 20px; font-size: 20px; text-decoration: none; color: blueviolet;}
+    .right__films a:hover{color: $primary-color;}
+}
+// проверка autoprefixer
+.example {
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}
+//Импортирую файл media.scss
+@import 'media.scss'

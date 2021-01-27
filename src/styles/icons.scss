@@ -1,0 +1,17 @@
+﻿@font-face {
+  font-family: 'Icons';
+  src: url('../assets/fonts/fontello.eot?30223175');
+  src: url('../assets/fonts/fontello.woff2?30223175') format('woff2'),
+       url('../assets/fonts/fontello.woff?30223175') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "Icons";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+}
+ 
+.icon-klapperstei:before { content: '\e802'; } 
+.icon-glass:before { content: '\e803'; }
