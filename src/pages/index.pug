@@ -1,55 +1,153 @@
 doctype html
-head
-  meta(charset='utf-8')
-  title &Tcy;&iecy;&scy;&tcy;
-  link(rel='stylesheet' href='styles/style.css')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-body#body
-.left
-  button#darkthemeOn Включить тёмную тему
-  button#darkthemeOff Выключить тёмную тему
-  img(src='assets/img/Smile.png')
-.center
-  h1 О себе
-  .center__persone
-    p.center__persone__Name
-      b Имя
-      | :Валерий
-    p.center__persone__birthDate
-      b Дата рождения
-      | :22.04.97
-    p.center__persone__children
-      b Дети
-      | :детей нет
-    p.center__persone__gender
-      b Пол
-      | :мужской
-    p.center__persone__nationality
-      b Страна
-      | :Россия
-    p.center__persone__about
-      | Использован типограф! -> - "Sed consequat lobortis tellus quis fringilla. Aenean eleifend sapien quis tellus rhoncus, et elementum justo pulvinar. Vestibulum gravida metus non turpis congue dignissim. Cras vitae urna nibh. Morbi consectetur ex vel cursus bibendum. Nunc dignissim massa non lacus commodo fringilla. Sed id ipsum ac diam fermentum condimentum feugiat a nunc. Nulla tincidunt vel ante non venenatis. Vestibulum fermentum velit et auctor sodales. Sed sagittis metus eget justo lobortis lobortis. Nulla dictum condimentum ipsum, a interdum nibh rutrum a. Nulla sed justo mi. Suspendisse sit amet feugiat magna."
-.right
-  .right__films
-    h1 Любимые фильмы:
-    figure.icon-klapperstei 
-      a(href='https://yandex.ru/video/preview/?text=ван%20хельсинг&path=wizard&parent-reqid=1611344218480793-1309973593895430904100284-prestable-app-host-sas-web-yp-102&wiz_type=v4thumbs&filmId=17864313596008191683') Ван Хельсинг
-    br
-    br
-    figure.icon-klapperstei
-      a(href='https://www.youtube.com/watch?v=fAdqNYBGjys') Другой мир
-    br
-    br
-    figure.icon-klapperstei 
-      a(href='https://yandex.ru/video/preview/?text=блейд&path=wizard&parent-reqid=1611344504123389-1290038625919035707300267-prestable-app-host-sas-web-yp-20&wiz_type=vital&filmId=18328954964200579549') Блейд
-    br
-    br
-    h1 Любимые альбомы:
-    figure.icon-glass
-      a(href='https://vk.com/music/album/-2000318546_7318546_4f177dc9207f41a3b8') Angel Dust
-    br
-    br
-    figure.icon-glass     
-      a(href='https://vk.com/music/album/-2000318501_7318501_174c6ad11dd25ba0e5') Seelenschmerz
-      .example Проверка автофиксера 
-script(src="scripts/index.js")
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css")
+    link(href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css")
+    link(rel="stylesheet" href="styles/style.css")
+    title Тест
+  body
+    header.header
+      .header__tittle
+        .header__tittle__slogan
+          h1 Репро дукцио
+          p Оффлайн-магазин репродукций шедевров мирового искусства
+        .header__tittle__adress
+          p Санкт-Петербург, ул. Адмирала Черокова, 18
+          br
+          p
+            | +7 812 960-22-01 
+            a.mail(href="shop@reproduct.io")  shop@reproduct.io
+      .header__slider
+        .slider-for
+          #slide_1.slider-for__slide
+            .slider-for__text
+              .slide__text__about
+                a.picture(href="#") Корабль
+                p.Autor Автор ...
+              .slide__text__sale
+                p 131 x 155 см, холст
+                span.rubl 2400 ⃏
+          #slide_2.slider-for__slide
+            .slider-for__text
+              .slide__text__about
+                a.picture(href="#") Пейзаж
+                p.Autor Автор ...
+              .slide__text__sale
+                p 97 x 108 см, холст
+                span.rubl 2000 ⃏
+          #slide_3.slider-for__slide
+            .slider-for__text
+              .slide__text__about
+                a.picture(href="#") Путешевствие
+                p.Autor Автор ...
+              .slide__text__sale
+                p 123 x 110 см, холст
+                span.rubl 3000 ⃏
+      .slider-nav
+        div(id="#slide_1")
+          img(src="assets/img/152.jpg")
+        div(id="#slide_2")
+          img(src="assets/img/klod-mone-leto-lug-v-bezone.jpg")
+        div(id="#slide_3")
+          img(src="assets/img/picfull2_5b06d59739320.jpg")
+    .fone
+      footer.footer
+        .footer__tittle
+          h1 Популярное
+          p Нестареющая классика и бестселлеры.
+        .footer__slider
+          .slider2
+            #slide_1.slider__slide
+              img(src="assets/img/cover.jpg")
+              .slider__text
+                .slide__text__about
+                  a.picture(href="#") Поле
+                  p.Autor Автор ...
+                  p.size 100 x 110 см, холст
+                  p.sale
+                    span.rubl 2000 ⃏
+            #slide_2.slider__slide
+              img(src="assets/img/Ivan-Ivanovich-Shishkin-Morning-in-piny-wood-study-.jpg")
+              .slider__text
+                .slide__text__about
+                  a.picture(href="#") Мишки на дереве
+                  p.Autor Автор ...
+                  p.size 150 x 140 см, холст
+                  p.sale
+                    span.rubl 3200 ⃏
+            #slide_3.slider__slide
+              img(src="assets/img/ivan-shishkin-peizazh-s-ozerom-kholst-maslo-kartina-priroda.jpg")
+              .slider__text
+                .slide__text__about
+                  a.picture(href="#") Озеро
+                  p.Autor Автор ...
+                  p.size 150 x 90 см, холст
+                  p.sale
+                    span.rubl 2600 ⃏
+            #slide_4.slider__slide
+              img(src="assets/img/picfull2_5e0dfd371b084.jpg")
+              .slider__text
+                .slide__text__about
+                  a.picture(href="#") Село
+                  p.Autor Автор ...
+                  p.size 160 x 140 см, холст
+                  p.sale
+                    span.rubl 3200 ⃏
+        .footer__down
+          .footer__write
+            .footer__write__write-me
+              h1 Написать нам
+              p
+                | Заполните форму справа или отправьте письмо на 
+                a(href="#") shop@reproduct.io
+            .footer__write__info
+              p Репродукцио, 2019
+              div
+                a.show-popup(href="#text-popup" data-effect="mfp-zoom-in") Правила обработки персональных данных
+              #text-popup.white-popup.mfp-with-anim.mfp-hide
+                .text-popup__text
+                  h3 Правила обработки персональных данных
+                  p
+                    | Представляя свои персональные данные Пользователь деёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ "О персональных данных" от 27.07.2006 г. в следующих целях:
+                  .about
+                    p Осуществление клиентской поддержки;
+                    p Получения Пользователем информации о маркетинговых событиях;
+                    p
+                      | Проведения аудита и внутренних исследований с целью повышения качества предоставляемых услуг.
+                  p
+                    | Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность ПОльзователя, такая как:
+                  .about
+                    p Фамилия, имя и отчество
+                  p
+                    | Персональные данные Пользователей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с использованием требований законодательства.
+                  p
+                    | Компания обязуется не передавать полученных Персональные данные третьим лицам, за исключением следующих случаев:
+                  p
+                    | По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ
+                  p
+                    | Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.
+                button.mfp-close(title="Close (Esc)" type="button")
+                  figure.mfp-close.icon-close-1
+          .footer__message
+            .footer__message__inputs
+              input#email(placeholder="Эл. почта")
+              textarea#message(placeholder="Сообщение")
+              button#toSend Отправить сообщение
+            .footer__message__success
+              h1 Отправлено
+              p Мы ответим Вам на почту в течение нескольких рабочих дней
+            span.error
+    script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js")
+    script(src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js")
+    script(src="https://unpkg.com/vee-validate@2.0.0-rc.7/dist/vee-validate.js")
+    script(src="scripts/index.js")
