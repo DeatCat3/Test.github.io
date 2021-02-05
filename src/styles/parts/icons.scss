@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../assets/fonts/fontello.eot?20027789');
+    src: url('../assets/fonts/fontello.woff2?20027789') format('woff2'),
+         url('../assets/fonts/fontello.woff?20027789') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+   [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: bold;
+    display: inline-block;
+}
+.header__slider{
+ .icon-arr-right{
+    position: absolute;
+    bottom: 225px;
+    left: 575px;
+    width: 15px;
+  }
+ .icon-arr-left{
+  z-index: 1;
+  left: 10px;
+  position: absolute;
+  bottom: 225px;
+  width: 15px;
+  }
+}
+.footer__slider{
+  .icon-arr-right{
+    height: 15px;
+    position: absolute;
+    bottom: 125px;
+    left: 100%;
+    width: 15px;
+  }
+ .icon-arr-left{
+  height: 15px;
+  position: absolute;
+  bottom: 125px;
+  right: 100%;
+  width: 15px;
+  }
+}
+  .slick-arrow{color: grey;}
+  .slick-arrow:hover{color: white;}
+  .icon-arr-left:before { content: '\e803'; }
+  .icon-arr-left:hover{cursor: pointer;}
+  .icon-arr-right:before {content: '\e804'; }
+  .icon-arr-right:hover{cursor: pointer;}
+  .icon-close-1:before { content: '\e806'; }

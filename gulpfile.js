@@ -7,6 +7,7 @@ var typograf = require('gulp-typograf');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('cssnano');
+var webpack = require('webpack-stream');
 
 // Девсервер
 function devServer(cb) {
@@ -31,21 +32,17 @@ function buildPages() {
 
 
 function buildStyles() {
-  return src('src/styles/style.scss')
+  return src('src/styles/**/style.scss')
    .pipe(scss())
-   .pipe(postcss([cssnano()]))
-   .pipe(autoprefixer({
-    cascade: false
-}))
+   .pipe(postcss([cssnano()]),[(autoprefixer({cascade: false}))])
    .pipe(dest('build/styles/'));
 }
 
-
 function buildScripts() {
-  return src('src/scripts/**/*.js')
-    .pipe(dest('build/scripts/'));
+  return src('src/scripts/index.js')
+  .pipe(webpack({ output: { filename: 'index.js' } }))
+  .pipe(dest('build/scripts/'));
 }
-
 
 function buildAssets(cb) {
   src(['src/assets/**/*.*', '!src/assets/img/**/*.*'])
@@ -59,7 +56,7 @@ function buildAssets(cb) {
 // Отслеживание
 function watchFiles() {
   watch('src/pages/*.pug', buildPages);
-  watch('src/styles/*.scss', buildStyles);
+  watch('src/styles/**/*.scss', buildStyles);
   watch('src/scripts/**/*.js', buildScripts);
   watch('src/assets/**/*.*', buildAssets);
 }

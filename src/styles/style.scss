@@ -1,32 +1,94 @@
-﻿// Удобная вложенность файла для иконок
-@import 'icons.scss';
-*{padding: 0; margin: 0;}
-// Использовал для примера 2 переменные
-$primary-color: red;
-$radius: 12px*2 solid black;
-@media screen and (min-width: 540px){
-    body{display: flex; justify-content: space-between;}
-    button{margin-left:50px; margin-top: 30px; border-radius: $radius; color: blue;}
-    //Вложенность
-    .left{width: 25%; height: 100vh;
-    button:hover{cursor: pointer; color: $primary-color;}
-    img{width: 100%; margin-top: 150px;}
+﻿*{padding: 0; margin: 0; outline: none}
+body{overflow-x: hidden; font-family: 'Open Sans', sans-serif;}
+.fone{width: 100%;
+    // background-image: url(../assets/img/RC83Yi.jpg);
 }
-//конец вложенности
-    .center{ width: 50%; height: 100vh;}
-    h1{font-size: 44px; text-align: center; margin-bottom: 30px;}
-    .center__persone{margin-left: 20px;}
-    .center p{margin-bottom: 20px; font-size: 24px;}
-    .right{ width: 25%; height: 100vh;}
-    .right__films a{margin-left: 20px; font-size: 20px; text-decoration: none; color: blueviolet;}
-    .right__films a:hover{color: $primary-color;}
+.header, .footer{max-width: 1100px; margin: 0 auto;}
+@import './parts/popup.scss';
+@import './parts/slider.scss';
+@import './parts/icons.scss';
+@import './parts/rubl.scss';
+@import './parts/font.scss';
+@import './vendor/slick.scss';
+@import './vendor/magnific.scss';
+.header{
+    display: flex;
+    margin-bottom: 30px;
+    .header__tittle{
+        width: 210px;
+        display: flex;
+        flex-direction: column;
+        p{font-size: 12px;}
+        .header__tittle__slogan{
+            margin-bottom: 20px;
+            h1{
+                margin-bottom: 10px;
+                line-height: 30px; 
+                margin-top: 10px;
+            }
+        }
+        .header__tittle__adress{
+            width: 165px;
+            color: #AFAFAF;
+            .mail{text-decoration: none; color: #AFAFAF;}
+            .mail:hover{color: black;}
+        }
+    }
+    .header__slider{
+        width: 700px;
+        margin-left: 20px;
+        display: flex;
+        margin: 20px auto 0 auto;
+    }
 }
-// проверка autoprefixer
-.example {
-    display: grid;
-    transition: all .5s;
-    user-select: none;
-    background: linear-gradient(to bottom, white, black);
+.footer{
+.footer__tittle{ 
+    padding: 10px 0 20px 0;
+    color: white;}
+.footer__down{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+.footer__write{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    .footer__write__write-me{ height: 100px; 
+    h1{color: white;}
+    p{color: gray;}
+    a{color: gray;}
+    a:hover{color: white;}
+    }
+    .footer__write__info{margin-bottom: 50px;
+    p{margin-bottom: 10px; color: gray;}
+    }
 }
-//Импортирую файл media.scss
-@import 'media.scss'
+}
+.footer__message{
+    display: flex;
+    .footer__message__inputs{ 
+    margin-top: 40px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px auto;
+    }
+    input, textarea, button{margin-bottom: 20px; border-radius: 5px;}
+    #email{height: 30px; padding-left: 10px;}
+    #message{height: 170px; padding: 10px; font-family: Arial, Helvetica, sans-serif;}
+    #toSend{height: 40px; border-radius: 5px; color: white; background-color: #2401FE; width: 170px; margin-left: 80px;}
+    #toSend:hover{cursor: pointer; background-color: #1D00CC;}
+    .has__error{color: red; font-size: 14px; width: 165px;padding-left: 10px; height: 50px; margin-top: 40px; margin-left: 20px; margin-right: -150px;}
+}
+.footer__message__success{color: #02AE00; width: 270px;
+    margin-top: 150px;
+    display:none;
+    h1{transform: rotate(-10deg);margin-bottom: 30px; margin-left: -20px;}  
+}
+
+}
